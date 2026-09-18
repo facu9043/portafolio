@@ -1,4 +1,5 @@
 import type { HTMLAttributes, ReactNode } from 'react'
+import type { IconType } from 'react-icons'
 import { cn } from '../../lib/cn'
 
 const accentBg = {
@@ -12,18 +13,30 @@ const accentBg = {
 interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
   children: ReactNode
   accent?: keyof typeof accentBg
+  icon?: IconType
+  iconColor?: string
 }
 
-export function Badge({ children, accent = 'white', className, ...props }: BadgeProps) {
+export function Badge({
+  children,
+  accent = 'white',
+  icon: Icon,
+  iconColor,
+  className,
+  ...props
+}: BadgeProps) {
   return (
     <span
       className={cn(
-        'inline-block border-2 border-ink px-3 py-1 font-mono text-xs font-bold uppercase tracking-tight',
+        'inline-flex items-center gap-1.5 border-2 border-ink px-3 py-1 font-mono text-xs font-bold uppercase tracking-tight',
         accentBg[accent],
         className,
       )}
       {...props}
     >
+      {Icon && (
+        <Icon size={14} style={iconColor ? { color: iconColor } : undefined} aria-hidden="true" />
+      )}
       {children}
     </span>
   )

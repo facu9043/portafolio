@@ -4,8 +4,6 @@ import { revealContainer, revealItem, scrollRevealProps } from '../../hooks/useS
 import { Badge } from '../ui/Badge'
 import { TerminalTag } from '../ui/TerminalTag'
 
-const accents = ['yellow', 'lime', 'cyan', 'pink'] as const
-
 export function Skills() {
   return (
     <section id="skills" className="mx-auto max-w-5xl px-4 py-16 sm:px-6">
@@ -15,15 +13,15 @@ export function Skills() {
       <motion.div
         variants={revealContainer}
         {...scrollRevealProps}
-        className="mt-8 grid gap-6 sm:grid-cols-2"
+        className="mt-8 grid gap-8 sm:grid-cols-2"
       >
-        {skills.map((group, i) => (
+        {skills.map((group) => (
           <motion.div key={group.category} variants={revealItem}>
             <h3 className="mb-3 font-display text-lg font-bold">{group.category}</h3>
             <div className="flex flex-wrap gap-2">
               {group.items.map((item) => (
-                <Badge key={item} accent={accents[i % accents.length]}>
-                  {item}
+                <Badge key={item.name} accent="white" icon={item.icon} iconColor={item.color}>
+                  {item.name}
                 </Badge>
               ))}
             </div>
