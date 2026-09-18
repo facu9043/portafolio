@@ -1,0 +1,39 @@
+@import '@fontsource/space-grotesk/500.css';
+@import '@fontsource/space-grotesk/700.css';
+@import '@fontsource/space-mono/400.css';
+@import '@fontsource/space-mono/700.css';
+
+@import 'tailwindcss';
+
+@theme {
+  --color-cream: #f4f0ea;
+  --color-ink: #000000;
+  --color-yellow: #ffe500;
+  --color-lime: #c1ff72;
+  --color-cyan: #5eead4;
+  --color-pink: #ff6fb5;
+
+  --shadow-neo-sm: 2px 2px 0px 0px #000;
+  --shadow-neo: 4px 4px 0px 0px #000;
+  --shadow-neo-lg: 6px 6px 0px 0px #000;
+
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-mono: 'Space Mono', ui-monospace, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-cream text-ink font-display;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
