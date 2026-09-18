@@ -13,10 +13,15 @@ export function BackgroundFX() {
   return (
     <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
       <div
-        className="absolute inset-0 opacity-[0.35]"
+        className="absolute inset-0"
         style={{
-          backgroundImage: 'radial-gradient(rgba(0,0,0,0.35) 1px, transparent 1px)',
-          backgroundSize: '28px 28px',
+          backgroundImage: [
+            'linear-gradient(rgba(0,0,0,0.07) 1px, transparent 1px)',
+            'linear-gradient(90deg, rgba(0,0,0,0.07) 1px, transparent 1px)',
+            'linear-gradient(rgba(0,0,0,0.14) 1px, transparent 1px)',
+            'linear-gradient(90deg, rgba(0,0,0,0.14) 1px, transparent 1px)',
+          ].join(', '),
+          backgroundSize: '20px 20px, 20px 20px, 100px 100px, 100px 100px',
         }}
       />
 
