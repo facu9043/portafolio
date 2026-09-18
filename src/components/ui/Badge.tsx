@@ -35,7 +35,9 @@ export function Badge({
       {...props}
     >
       {Icon && (
-        <Icon size={14} style={iconColor ? { color: iconColor } : undefined} aria-hidden="true" />
+        <span className="inline-flex h-5 w-5 shrink-0 items-center justify-center border-2 border-ink bg-white">
+          <Icon size={12} style={iconColor ? { color: iconColor } : undefined} aria-hidden="true" />
+        </span>
       )}
       {children}
     </span>

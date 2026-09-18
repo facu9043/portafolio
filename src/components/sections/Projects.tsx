@@ -5,6 +5,7 @@ import { revealContainer, revealItem, scrollRevealProps } from '../../hooks/useS
 import { Badge } from '../ui/Badge'
 import { GithubGlyph } from '../ui/icons'
 import { NeoCard } from '../ui/NeoCard'
+import { StickerTitle } from '../ui/StickerTitle'
 import { TerminalTag } from '../ui/TerminalTag'
 
 const tilts = [-1.5, 1.5, -1]
@@ -20,7 +21,9 @@ export function Projects() {
   return (
     <section id="projects" className="mx-auto max-w-5xl px-4 py-16 sm:px-6">
       <TerminalTag>ls ./proyectos</TerminalTag>
-      <h2 className="mt-2 font-display text-3xl font-bold sm:text-4xl">Proyectos</h2>
+      <StickerTitle accent="lime" rotate={-2} className="mt-3">
+        <h2 className="font-display text-3xl font-bold sm:text-4xl">Proyectos</h2>
+      </StickerTitle>
 
       <motion.div
         variants={revealContainer}

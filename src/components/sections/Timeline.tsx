@@ -3,21 +3,28 @@ import { motion } from 'framer-motion'
 import { certifications, education, experience } from '../../data/experience'
 import { revealContainer, revealItem, scrollRevealProps } from '../../hooks/useScrollReveal'
 import { Badge } from '../ui/Badge'
+import { StickerTitle } from '../ui/StickerTitle'
 import { TerminalTag } from '../ui/TerminalTag'
 
 function TimelineColumn({
   title,
   command,
+  accent,
+  rotate,
   children,
 }: {
   title: string
   command: string
+  accent: 'yellow' | 'lime' | 'cyan' | 'pink'
+  rotate: number
   children: ReactNode
 }) {
   return (
     <div>
       <TerminalTag>{command}</TerminalTag>
-      <h3 className="mt-2 mb-6 font-display text-2xl font-bold">{title}</h3>
+      <StickerTitle accent={accent} rotate={rotate} className="mt-3 mb-6">
+        <h3 className="font-display text-2xl font-bold">{title}</h3>
+      </StickerTitle>
 
       <motion.div variants={revealContainer} {...scrollRevealProps} className="relative pl-6">
         <motion.span
@@ -60,7 +67,7 @@ export function Timeline() {
   return (
     <section id="timeline" className="mx-auto max-w-5xl px-4 py-16 sm:px-6">
       <div className="grid gap-12 md:grid-cols-2">
-        <TimelineColumn title="Experiencia" command="cat experiencia.log">
+        <TimelineColumn title="Experiencia" command="cat experiencia.log" accent="lime" rotate={-1.5}>
           {experience.map((item) => (
             <TimelineNode
               key={item.role + item.place}
@@ -72,7 +79,7 @@ export function Timeline() {
           ))}
         </TimelineColumn>
 
-        <TimelineColumn title="Educación" command="cat educacion.log">
+        <TimelineColumn title="Educación" command="cat educacion.log" accent="cyan" rotate={1.5}>
           {education.map((item) => (
             <TimelineNode
               key={item.title}
