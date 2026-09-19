@@ -5,7 +5,6 @@ import { projects } from '../../data/projects'
 import { revealContainer, revealItem, scrollRevealProps } from '../../hooks/useScrollReveal'
 import { Badge } from '../ui/Badge'
 import { CornerRibbon } from '../ui/CornerRibbon'
-import { GithubGlyph } from '../ui/icons'
 import { NeoCard } from '../ui/NeoCard'
 import { StickerTitle } from '../ui/StickerTitle'
 import { TerminalTag } from '../ui/TerminalTag'
@@ -92,17 +91,8 @@ export function Projects() {
                   ))}
                 </div>
 
-                <div className="mt-auto flex gap-3 pt-2">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 border-2 border-ink bg-ink px-3 py-1.5 font-mono text-xs font-bold text-cream shadow-neo-sm transition-transform duration-150 hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0.5 active:translate-y-0.5"
-                  >
-                    <GithubGlyph size={14} />
-                    Código
-                  </a>
-                  {project.demo && (
+                {project.demo && (
+                  <div className="mt-auto flex gap-3 pt-2">
                     <a
                       href={project.demo}
                       target="_blank"
@@ -112,8 +102,8 @@ export function Projects() {
                       <ExternalLink size={14} aria-hidden="true" />
                       Demo
                     </a>
-                  )}
-                </div>
+                  </div>
+                )}
               </div>
             </NeoCard>
           </motion.div>
