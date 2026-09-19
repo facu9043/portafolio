@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { ExternalLink } from 'lucide-react'
+import type { Project } from '../../data/projects'
 import { projects } from '../../data/projects'
 import { revealContainer, revealItem, scrollRevealProps } from '../../hooks/useScrollReveal'
 import { Badge } from '../ui/Badge'
@@ -17,6 +18,29 @@ const headerAccent = {
   cyan: 'bg-cyan',
   pink: 'bg-pink',
 } as const
+
+function ProjectLogo({ project }: { project: Project }) {
+  if (project.image) {
+    return (
+      <img
+        src={project.image}
+        alt=""
+        className="h-10 w-10 shrink-0 border-2 border-ink bg-white object-cover"
+      />
+    )
+  }
+
+  if (project.icon) {
+    const Icon = project.icon
+    return (
+      <span className="flex h-10 w-10 shrink-0 items-center justify-center border-2 border-ink bg-white">
+        <Icon size={20} style={project.iconColor ? { color: project.iconColor } : undefined} />
+      </span>
+    )
+  }
+
+  return null
+}
 
 export function Projects() {
   return (
@@ -47,26 +71,14 @@ export function Projects() {
                   rel="noopener noreferrer"
                   className={`flex items-center gap-3 border-b-[3px] border-ink px-5 py-4 transition-opacity hover:opacity-90 ${headerAccent[project.accent]}`}
                 >
-                  {project.image && (
-                    <img
-                      src={project.image}
-                      alt=""
-                      className="h-10 w-10 shrink-0 border-2 border-ink bg-white object-cover"
-                    />
-                  )}
+                  <ProjectLogo project={project} />
                   <h3 className="font-display text-xl font-bold">{project.title}</h3>
                 </a>
               ) : (
                 <div
                   className={`flex items-center gap-3 border-b-[3px] border-ink px-5 py-4 ${headerAccent[project.accent]}`}
                 >
-                  {project.image && (
-                    <img
-                      src={project.image}
-                      alt=""
-                      className="h-10 w-10 shrink-0 border-2 border-ink bg-white object-cover"
-                    />
-                  )}
+                  <ProjectLogo project={project} />
                   <h3 className="font-display text-xl font-bold">{project.title}</h3>
                 </div>
               )}

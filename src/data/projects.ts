@@ -1,3 +1,6 @@
+import type { IconType } from 'react-icons'
+import { SiGoogleappsscript } from 'react-icons/si'
+
 export interface Project {
   title: string
   description: string
@@ -5,6 +8,8 @@ export interface Project {
   github: string
   demo?: string
   image?: string
+  icon?: IconType
+  iconColor?: string
   accent: 'yellow' | 'lime' | 'cyan' | 'pink'
   inDevelopment?: boolean
 }
@@ -25,6 +30,8 @@ export const projects: Project[] = [
       'Suite de automatizaciones en Google Apps Script para seguimiento de proyectos, control de horarios y generación de reportes.',
     stack: ['Google Apps Script', 'Google Workspace API', 'Looker Studio'],
     github: 'https://github.com/facu9043',
+    icon: SiGoogleappsscript,
+    iconColor: '#4285F4',
     accent: 'lime',
   },
   {
