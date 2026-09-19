@@ -25,10 +25,11 @@ export const projects: Project[] = [
     accent: 'lime',
   },
   {
-    title: 'Próximo proyecto',
-    description: 'Este espacio está reservado para el próximo proyecto real en desarrollo.',
-    stack: ['Python', 'Ciberseguridad'],
-    github: 'https://github.com/facu9043',
+    title: 'Buonstile Indumentaria',
+    description:
+      'E-commerce para una marca de indumentaria: catálogo filtrable, carrito de compras y checkout que finaliza el pedido por WhatsApp. Panel de administración propio para editar precios, stock por talle y fotos de producto.',
+    stack: ['React', 'Vite', 'Supabase', 'JavaScript'],
+    github: 'https://github.com/facu9043/Buonstile',
     accent: 'cyan',
   },
 ]
