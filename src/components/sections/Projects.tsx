@@ -3,6 +3,7 @@ import { ExternalLink } from 'lucide-react'
 import { projects } from '../../data/projects'
 import { revealContainer, revealItem, scrollRevealProps } from '../../hooks/useScrollReveal'
 import { Badge } from '../ui/Badge'
+import { CornerRibbon } from '../ui/CornerRibbon'
 import { GithubGlyph } from '../ui/icons'
 import { NeoCard } from '../ui/NeoCard'
 import { StickerTitle } from '../ui/StickerTitle'
@@ -32,7 +33,13 @@ export function Projects() {
       >
         {projects.map((project, i) => (
           <motion.div key={project.title} variants={revealItem}>
-            <NeoCard accent="white" tilt={tilts[i % tilts.length]} className="flex h-full flex-col">
+            <NeoCard
+              accent="white"
+              tilt={tilts[i % tilts.length]}
+              className={`relative flex h-full flex-col ${project.inDevelopment ? 'overflow-hidden' : ''}`}
+            >
+              {project.inDevelopment && <CornerRibbon>Próximamente</CornerRibbon>}
+
               {project.demo ? (
                 <a
                   href={project.demo}

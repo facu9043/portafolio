@@ -6,6 +6,7 @@ export interface Project {
   demo?: string
   image?: string
   accent: 'yellow' | 'lime' | 'cyan' | 'pink'
+  inDevelopment?: boolean
 }
 
 export const projects: Project[] = [
@@ -16,6 +17,7 @@ export const projects: Project[] = [
     stack: ['Next.js', 'TypeScript', 'Supabase', 'Tailwind CSS'],
     github: 'https://github.com/facu9043/menusky',
     accent: 'yellow',
+    inDevelopment: true,
   },
   {
     title: 'Automatización de Gestiones (Apps Script)',
@@ -34,5 +36,15 @@ export const projects: Project[] = [
     demo: 'https://buonstile.netlify.app/',
     image: '/projects/buonstile-logo.png',
     accent: 'cyan',
+  },
+  {
+    title: 'Producciones Nan',
+    description:
+      'Catálogo online de panadería y pastelería artesanal, con línea sin TACC y carrito de compra.',
+    stack: ['React', 'Vite', 'Tailwind CSS', 'Supabase'],
+    github: 'https://github.com/facu9043/producciones-nan',
+    demo: 'https://producciones-nan.netlify.app/',
+    image: '/projects/producciones-nan-logo.png',
+    accent: 'pink',
   },
 ]
