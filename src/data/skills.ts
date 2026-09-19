@@ -1,23 +1,34 @@
 import type { IconType } from 'react-icons'
 import {
+  SiBurpsuite,
+  SiClaude,
   SiCss,
   SiGit,
+  SiGnubash,
   SiGoogle,
+  SiGoogleappsscript,
+  SiGoogledrive,
+  SiGooglegemini,
+  SiHashcat,
   SiHtml5,
   SiJavascript,
   SiLinux,
   SiLooker,
+  SiMetasploit,
   SiMongodb,
   SiMysql,
+  SiN8N,
   SiNextdotjs,
   SiNodedotjs,
+  SiOwasp,
   SiPostgresql,
   SiPython,
   SiReact,
   SiSupabase,
   SiTypescript,
+  SiWireshark,
 } from 'react-icons/si'
-import { TbBrandVscode, TbNetwork, TbShieldLock } from 'react-icons/tb'
+import { TbBrandVscode, TbRadar2, TbShieldLock } from 'react-icons/tb'
 
 export interface SkillItem {
   name: string
@@ -56,25 +67,24 @@ export const skills: SkillCategory[] = [
   {
     category: 'Automatización y Cloud',
     items: [
-      { name: 'Google Apps Script', icon: SiGoogle, color: '#4285F4' },
+      { name: 'Google Apps Script', icon: SiGoogleappsscript, color: '#4285F4' },
       { name: 'Google Workspace API', icon: SiGoogle, color: '#4285F4' },
       { name: 'Looker Studio', icon: SiLooker, color: '#4285F4' },
-    ],
-  },
-  {
-    category: 'Datos y Productividad',
-    items: [
-      { name: 'Microsoft Excel Avanzado' },
-      { name: 'Dashboards' },
-      { name: 'Análisis de datos' },
+      { name: 'n8n', icon: SiN8N, color: '#EA4B71' },
     ],
   },
   {
     category: 'Ciberseguridad y Redes',
     items: [
-      { name: 'Fundamentos de Redes', icon: TbNetwork, color: '#0EA5E9' },
-      { name: 'Linux', icon: SiLinux, color: '#000000' },
       { name: 'Ethical Hacking (Cisco Certified)', icon: TbShieldLock, color: '#DC2626' },
+      { name: 'Linux', icon: SiLinux, color: '#000000' },
+      { name: 'Bash', icon: SiGnubash, color: '#4EAA25' },
+      { name: 'Nmap', icon: TbRadar2, color: '#22C55E' },
+      { name: 'Wireshark', icon: SiWireshark, color: '#1679A7' },
+      { name: 'Burp Suite', icon: SiBurpsuite, color: '#FF6633' },
+      { name: 'Metasploit', icon: SiMetasploit, color: '#2596CD' },
+      { name: 'OWASP ZAP', icon: SiOwasp, color: '#000000' },
+      { name: 'Hashcat', icon: SiHashcat, color: '#8AB61D' },
     ],
   },
   {
@@ -82,7 +92,9 @@ export const skills: SkillCategory[] = [
     items: [
       { name: 'Git', icon: SiGit, color: '#F05032' },
       { name: 'VS Code', icon: TbBrandVscode, color: '#007ACC' },
-      { name: 'Herramientas de IA para programación' },
+      { name: 'Gemini', icon: SiGooglegemini, color: '#8E75B2' },
+      { name: 'Claude', icon: SiClaude, color: '#D97757' },
+      { name: 'Google Workspace', icon: SiGoogledrive, color: '#4285F4' },
     ],
   },
 ]
