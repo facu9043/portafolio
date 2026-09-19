@@ -100,7 +100,7 @@ export function Projects() {
                       className="inline-flex items-center gap-1.5 border-2 border-ink bg-white px-3 py-1.5 font-mono text-xs font-bold shadow-neo-sm transition-transform duration-150 hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0.5 active:translate-y-0.5"
                     >
                       <ExternalLink size={14} aria-hidden="true" />
-                      Demo
+                      Visitar
                     </a>
                   </div>
                 )}
