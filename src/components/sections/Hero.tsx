@@ -1,10 +1,17 @@
 import { motion } from 'framer-motion'
-import { Mail } from 'lucide-react'
+import { Mail, MessageCircle } from 'lucide-react'
 import { profile } from '../../data/profile'
 import { useTypewriter } from '../../hooks/useTypewriter'
 import { GithubGlyph, LinkedinGlyph } from '../ui/icons'
-import { NeoButton } from '../ui/NeoButton'
+import { IconMarquee, type MarqueeItem } from '../ui/IconMarquee'
 import { TerminalTag } from '../ui/TerminalTag'
+
+const contactMarqueeItems: MarqueeItem[] = [
+  { label: 'Hablemos', icon: MessageCircle, variant: 'lime' },
+  { label: 'Email', icon: Mail, variant: 'white' },
+  { label: 'GitHub', icon: GithubGlyph, variant: 'ink' },
+  { label: 'LinkedIn', icon: LinkedinGlyph, variant: 'cyan' },
+]
 
 export function Hero() {
   const { output } = useTypewriter(`> cat rol.txt\n${profile.role}`, 22, 500)
@@ -40,41 +47,11 @@ export function Hero() {
 
         <TerminalTag className="mt-3">{profile.location}</TerminalTag>
 
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-3 md:justify-start">
-          <NeoButton
-            as="a"
-            href={profile.whatsapp}
-            target="_blank"
-            rel="noopener noreferrer"
-            variant="lime"
-          >
-            Hablemos
-          </NeoButton>
-          <NeoButton as="a" href={`mailto:${profile.email}`} variant="white">
-            <Mail size={16} aria-hidden="true" />
-            Email
-          </NeoButton>
-          <NeoButton
-            as="a"
-            href={profile.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            variant="ink"
-          >
-            <GithubGlyph size={16} />
-            GitHub
-          </NeoButton>
-          <NeoButton
-            as="a"
-            href={profile.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            variant="cyan"
-          >
-            <LinkedinGlyph size={16} />
-            LinkedIn
-          </NeoButton>
-        </div>
+        <IconMarquee
+          items={contactMarqueeItems}
+          href="#contact"
+          className="mt-8 shadow-neo-sm"
+        />
       </motion.div>
 
       <motion.div
