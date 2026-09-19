@@ -54,4 +54,13 @@ export const projects: Project[] = [
     image: '/projects/producciones-nan-logo.png',
     accent: 'pink',
   },
+  {
+    title: 'Ocani',
+    description:
+      'Catálogo mayorista de dietética online: filtros por categoría, presentación, precio y stock, más carrito de compra.',
+    stack: ['Next.js', 'TypeScript', 'Supabase', 'Tailwind CSS'],
+    github: 'https://github.com/facu9043/ocani-web',
+    demo: 'https://ocani-web.vercel.app/catalogo',
+    accent: 'yellow',
+  },
 ]
