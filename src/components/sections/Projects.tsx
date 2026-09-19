@@ -33,11 +33,36 @@ export function Projects() {
         {projects.map((project, i) => (
           <motion.div key={project.title} variants={revealItem}>
             <NeoCard accent="white" tilt={tilts[i % tilts.length]} className="flex h-full flex-col">
-              <div
-                className={`border-b-[3px] border-ink px-5 py-4 ${headerAccent[project.accent]}`}
-              >
-                <h3 className="font-display text-xl font-bold">{project.title}</h3>
-              </div>
+              {project.demo ? (
+                <a
+                  href={project.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`flex items-center gap-3 border-b-[3px] border-ink px-5 py-4 transition-opacity hover:opacity-90 ${headerAccent[project.accent]}`}
+                >
+                  {project.image && (
+                    <img
+                      src={project.image}
+                      alt=""
+                      className="h-10 w-10 shrink-0 border-2 border-ink bg-white object-cover"
+                    />
+                  )}
+                  <h3 className="font-display text-xl font-bold">{project.title}</h3>
+                </a>
+              ) : (
+                <div
+                  className={`flex items-center gap-3 border-b-[3px] border-ink px-5 py-4 ${headerAccent[project.accent]}`}
+                >
+                  {project.image && (
+                    <img
+                      src={project.image}
+                      alt=""
+                      className="h-10 w-10 shrink-0 border-2 border-ink bg-white object-cover"
+                    />
+                  )}
+                  <h3 className="font-display text-xl font-bold">{project.title}</h3>
+                </div>
+              )}
 
               <div className="flex flex-1 flex-col gap-4 p-5">
                 <p className="text-sm text-ink/80">{project.description}</p>

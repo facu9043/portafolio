@@ -4,6 +4,7 @@ export interface Project {
   stack: string[]
   github: string
   demo?: string
+  image?: string
   accent: 'yellow' | 'lime' | 'cyan' | 'pink'
 }
 
@@ -27,9 +28,11 @@ export const projects: Project[] = [
   {
     title: 'Buonstile Indumentaria',
     description:
-      'E-commerce para una marca de indumentaria: catálogo filtrable, carrito de compras y checkout que finaliza el pedido por WhatsApp. Panel de administración propio para editar precios, stock por talle y fotos de producto.',
+      'Tienda web de e-commerce. Panel de administración propio para editar precios, stock por talle y fotos de producto.',
     stack: ['React', 'Vite', 'Supabase', 'JavaScript'],
     github: 'https://github.com/facu9043/Buonstile',
+    demo: 'https://buonstile.netlify.app/',
+    image: '/projects/buonstile-logo.png',
     accent: 'cyan',
   },
 ]
