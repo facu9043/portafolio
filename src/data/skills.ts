@@ -9,7 +9,6 @@ import {
   SiGoogleappsscript,
   SiGoogledrive,
   SiGooglegemini,
-  SiHashcat,
   SiHtml5,
   SiJavascript,
   SiLinux,
@@ -28,7 +27,7 @@ import {
   SiTypescript,
   SiWireshark,
 } from 'react-icons/si'
-import { TbBrandVscode, TbRadar2, TbShieldLock } from 'react-icons/tb'
+import { TbBrandVscode, TbRadar2 } from 'react-icons/tb'
 
 export interface SkillItem {
   name: string
@@ -76,7 +75,6 @@ export const skills: SkillCategory[] = [
   {
     category: 'Ciberseguridad y Redes',
     items: [
-      { name: 'Ethical Hacking (Cisco Certified)', icon: TbShieldLock, color: '#DC2626' },
       { name: 'Linux', icon: SiLinux, color: '#000000' },
       { name: 'Bash', icon: SiGnubash, color: '#4EAA25' },
       { name: 'Nmap', icon: TbRadar2, color: '#22C55E' },
@@ -84,7 +82,6 @@ export const skills: SkillCategory[] = [
       { name: 'Burp Suite', icon: SiBurpsuite, color: '#FF6633' },
       { name: 'Metasploit', icon: SiMetasploit, color: '#2596CD' },
       { name: 'OWASP ZAP', icon: SiOwasp, color: '#000000' },
-      { name: 'Hashcat', icon: SiHashcat, color: '#8AB61D' },
     ],
   },
   {
