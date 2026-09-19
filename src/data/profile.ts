@@ -20,6 +20,6 @@ export const profile: Profile = {
   whatsapp: 'https://wa.me/5493624105311',
   linkedin: 'https://linkedin.com/in/facundo-benitez17',
   github: 'https://github.com/facu9043',
-  bio: 'Desarrollador enfocado en la creación de herramientas digitales, aplicaciones a medida y automatizaciones de procesos para comercios y negocios. Apasionado por la tecnología, la seguridad informática y el código eficiente.',
+  bio: 'Desarrollador enfocado en la creación de herramientas digitales, aplicaciones a medida y automatizaciones de procesos para PYMES y empresas. Apasionado por la tecnología, la seguridad informática y el código eficiente.',
   available: true,
 }

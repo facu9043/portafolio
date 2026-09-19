@@ -1,4 +1,5 @@
 import type { HTMLAttributes, ReactNode } from 'react'
+import { forwardRef } from 'react'
 import { motion } from 'framer-motion'
 import { cn } from '../../lib/cn'
 
@@ -26,16 +27,13 @@ interface NeoCardProps extends Omit<HTMLAttributes<HTMLDivElement>, ConflictingH
   interactive?: boolean
 }
 
-export function NeoCard({
-  children,
-  accent = 'white',
-  tilt = 0,
-  interactive = true,
-  className,
-  ...props
-}: NeoCardProps) {
+export const NeoCard = forwardRef<HTMLDivElement, NeoCardProps>(function NeoCard(
+  { children, accent = 'white', tilt = 0, interactive = true, className, ...props },
+  ref,
+) {
   return (
     <motion.div
+      ref={ref}
       className={cn('border-[3px] border-ink shadow-neo', accentBg[accent], className)}
       style={{ rotate: tilt }}
       whileHover={
@@ -47,4 +45,4 @@ export function NeoCard({
       {children}
     </motion.div>
   )
-}
+})

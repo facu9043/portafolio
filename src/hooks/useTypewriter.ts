@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react'
 import { useReducedMotion } from 'framer-motion'
 
-export function useTypewriter(text: string, speedMs = 45, startDelayMs = 300) {
+export function useTypewriter(text: string, speedMs = 45, startDelayMs = 300, start = true) {
   const prefersReducedMotion = useReducedMotion()
   const [typed, setTyped] = useState('')
   const [done, setDone] = useState(false)
 
   useEffect(() => {
-    if (prefersReducedMotion) return
+    if (prefersReducedMotion || !start) return
 
     let i = 0
     let interval: ReturnType<typeof setInterval>
@@ -26,7 +26,7 @@ export function useTypewriter(text: string, speedMs = 45, startDelayMs = 300) {
       clearTimeout(timeout)
       clearInterval(interval)
     }
-  }, [text, speedMs, startDelayMs, prefersReducedMotion])
+  }, [text, speedMs, startDelayMs, start, prefersReducedMotion])
 
   return {
     output: prefersReducedMotion ? text : typed,
