@@ -63,9 +63,13 @@ export function Hero() {
         <motion.div
           animate={{ y: [0, -8, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-          className="flex h-48 w-48 items-center justify-center border-[3px] border-ink bg-pink shadow-neo-lg sm:h-56 sm:w-56"
+          className="h-48 w-48 overflow-hidden border-[3px] border-ink bg-pink shadow-neo-lg sm:h-56 sm:w-56"
         >
-          <span className="font-display text-6xl font-bold text-ink">FB</span>
+          <img
+            src="/avatar.jpg"
+            alt={profile.name}
+            className="h-full w-full object-cover"
+          />
         </motion.div>
       </motion.div>
     </section>
