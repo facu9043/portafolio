@@ -1,8 +1,8 @@
 import { useEffect, type ReactNode, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { MessageCircle } from 'lucide-react'
+import { SiInstagram } from 'react-icons/si'
 import { profile } from '../../data/profile'
-import { LinkedinGlyph } from '../ui/icons'
 
 interface FloatingItem {
   href: string
@@ -19,10 +19,10 @@ const items: FloatingItem[] = [
     accent: 'bg-lime',
   },
   {
-    href: profile.linkedin,
-    label: 'Ver LinkedIn',
-    icon: LinkedinGlyph,
-    accent: 'bg-cyan',
+    href: profile.instagram,
+    label: 'Ver Instagram',
+    icon: SiInstagram,
+    accent: 'bg-pink',
   },
 ]
 
