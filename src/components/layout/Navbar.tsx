@@ -54,7 +54,7 @@ export function Navbar() {
 
         <a
           href="/cv.pdf"
-          download
+          download="CV - Facundo Ariel Benitez.pdf"
           className="inline-flex items-center gap-2 border-2 border-ink bg-ink px-3 py-1.5 font-mono text-xs font-bold text-cream shadow-neo-sm transition-transform duration-150 hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0.5 active:translate-y-0.5 sm:text-sm"
         >
           <Download size={14} aria-hidden="true" />
