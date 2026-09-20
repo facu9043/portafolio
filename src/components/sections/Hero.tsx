@@ -25,7 +25,7 @@ export function Hero() {
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
-        className="min-w-0 flex-1 text-center md:text-left"
+        className="w-full min-w-0 flex-1 text-center md:text-left"
       >
         {profile.available && (
           <span className="mb-4 inline-flex items-center gap-2 border-2 border-ink bg-lime px-3 py-1 font-mono text-xs font-bold">
