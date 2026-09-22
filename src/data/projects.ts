@@ -61,6 +61,7 @@ export const projects: Project[] = [
     stack: ['Next.js', 'TypeScript', 'Supabase', 'Tailwind CSS'],
     github: 'https://github.com/facu9043/ocani-web',
     demo: 'https://ocani-web.vercel.app/catalogo',
+    image: '/projects/ocani-logo.png',
     accent: 'yellow',
   },
 ]
