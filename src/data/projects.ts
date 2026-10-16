@@ -16,20 +16,22 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: 'Carta Digital & Pedidos QR',
+    title: 'MenuSky',
     description:
-      'Sistema de menú digital y pedidos por mesa para restaurantes: panel de cocina, panel de mozos y personalización visual por local.',
+      'Carta digital y pedidos por QR para restaurantes: los clientes piden desde la mesa, con panel de cocina, panel de mozos y personalización visual por local.',
     stack: ['Next.js', 'TypeScript', 'Supabase', 'Tailwind CSS'],
     github: 'https://github.com/facu9043/menusky',
+    demo: 'https://www.menusky.com.ar/',
+    image: '/projects/menusky-logo.png',
     accent: 'yellow',
-    inDevelopment: true,
   },
   {
     title: 'Automatización de Gestiones (Apps Script)',
     description:
-      'Suite de automatizaciones en Google Apps Script para seguimiento de proyectos, control de horarios y generación de reportes.',
-    stack: ['Google Apps Script', 'Google Workspace API', 'Looker Studio'],
+      'Web app sobre Google Workspace que automatiza tareas administrativas: seguimiento de proyectos, control de horarios y reportes generados a partir de Google Sheets.',
+    stack: ['Google Apps Script', 'Google Sheets', 'HTML/CSS', 'JavaScript'],
     github: 'https://github.com/facu9043',
+    demo: 'https://script.google.com/macros/s/AKfycbzVN9haBzB9RxqKt3ZvcMeMtEaKEtpRRzvExyv29u8k9AaNgnI8Y7C2QNsFF9uRtWis/exec',
     icon: SiGoogleappsscript,
     iconColor: '#4285F4',
     accent: 'lime',
