@@ -29,7 +29,7 @@ export const projects: Project[] = [
     title: 'Flow Vivid',
     description:
       'Automatización de gestiones en Apps Script: seguimiento integral de casos, que una segunda línea atiende y cierra hasta la solución, con avisos, exportación a CSV y reportes.',
-    stack: ['Google Apps Script', 'Google Sheets', 'HTML/CSS', 'JavaScript'],
+    stack: ['Google Apps Script', 'Google Cloud', 'Google Sheets', 'HTML/CSS', 'JavaScript'],
     github: 'https://github.com/facu9043',
     demo: 'https://script.google.com/macros/s/AKfycbzVN9haBzB9RxqKt3ZvcMeMtEaKEtpRRzvExyv29u8k9AaNgnI8Y7C2QNsFF9uRtWis/exec',
     icon: SiGoogleappsscript,
